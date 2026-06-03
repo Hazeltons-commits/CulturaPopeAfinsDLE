@@ -13,13 +13,6 @@ def carregar_dados():
     # Para ler ODS, você precisará da biblioteca 'odfpy' instalada
     data = pd.read_excel("DADOS.ods", header=None)
     
-    # Exemplo de estrutura baseada no seu código original:
-    #data = {
-        #0: ["Homem de Ferro", "Batman", "Superman", "Mulher Maravilha"], # Personagem
-        #1: ["Marvel", "DC", "DC", "DC"],                                # Editora
-        #2: ["Humano", "Humano", "Kryptoniano", "Semideusa"],           # Espécie
-        #3: [1963, 1939, 1938, 1941]                                    # Ano (exemplo numérico)
-    #}
     return pd.DataFrame(data)
 
 df = carregar_dados()
@@ -47,6 +40,13 @@ st.markdown("""
 - 🟥 **Vermelho**: Resposta errada
 - ⬆️/⬇️ **Setas**: Indicam se o valor numérico é maior ou menor
 """)
+
+st.markdown("""
+**Cetegorias::**
+- Os verificadores são os seguintes:
+- Time, Cidade em que morou durante o curso, Estado civil, Atributos e Altura
+""")
+
 
 # Inicializar o histórico de emojis no session_state
 if 'emoji_history' not in st.session_state:
