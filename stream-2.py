@@ -7,10 +7,10 @@ import datetime
 st.set_page_config(page_title="Culturapopeafinsdle", page_icon="🎮")
 
 # --- CARREGAMENTO DE DADOS ---
-# No Streamlit, usamos cache para não reler o arquivo a cada clique
+
 @st.cache_data
 def carregar_dados():
-    # Para ler ODS, você precisará da biblioteca 'odfpy' instalada
+    
     data = pd.read_excel("DADOS.ods", header=None)
     
     return pd.DataFrame(data)
@@ -18,7 +18,7 @@ def carregar_dados():
 df = carregar_dados()
 
 # --- LÓGICA DO JOGO ---
-# s = 0 (Resposta do dia). Você pode mudar isso usando a data atual:
+
 # s = datetime.datetime.now().day % len(df)
 #s = datetime.date.today().day % 11 
 s = 6
@@ -31,7 +31,7 @@ if 'venceu' not in st.session_state:
     st.session_state.venceu = False
 
 # --- INTERFACE ---
-st.title("🎯 Culturapopeafinsdle")
+st.title("CULTURAPOPEAFINSDLE")
 
 st.markdown("""
 **Regras:**
@@ -42,9 +42,10 @@ st.markdown("""
 """)
 
 st.markdown("""
-**Cetegorias::**
+**Cetegorias:**
 - Os verificadores são os seguintes:
 - Time, Cidade em que morou durante o curso, Estado civil, Atributos e Altura
+- Obs: X e 0 representam falta de informações, que, no geral, carecem completamente de fontes
 """)
 
 
