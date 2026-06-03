@@ -21,7 +21,7 @@ df = carregar_dados()
 
 # s = datetime.datetime.now().day % len(df)
 #s = datetime.date.today().day % 11 
-s = 6
+s = 5
 ans = df.iloc[s]
 
 # Inicializar variáveis de estado (sessão) para manter os palpites ao recarregar a página
@@ -155,7 +155,7 @@ for tentativa in st.session_state.tentativas:
             {item['valor']} {item['extra']}
         </div>
         """
-        # O pulo do gato: usar markdown com unsafe_allow_html
+        
         cols[i+1].markdown(card_html, unsafe_allow_html=True)
 
 # --- EXIBIÇÃO DO RESULTADO FINAL E BOTÃO DE COPIAR ---
