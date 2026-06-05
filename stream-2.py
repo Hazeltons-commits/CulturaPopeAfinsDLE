@@ -20,8 +20,8 @@ df = carregar_dados()
 # --- LÓGICA DO JOGO ---
 
 # s = datetime.datetime.now().day % len(df)
-#s = datetime.date.today().day % 11 
-s = 5
+s = datetime.date.today().day % 11 
+# s = 5
 ans = df.iloc[s]
 
 # Inicializar variáveis de estado (sessão) para manter os palpites ao recarregar a página
