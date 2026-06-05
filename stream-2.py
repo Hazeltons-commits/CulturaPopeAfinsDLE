@@ -20,7 +20,7 @@ df = carregar_dados()
 # --- LÓGICA DO JOGO ---
 
 # s = datetime.datetime.now().day % len(df)
-s = datetime.date.today().day % 11 
+s = (datetime.date.today().day % 11)+1
 # s = 5
 ans = df.iloc[s]
 
